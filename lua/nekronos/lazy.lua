@@ -11,12 +11,5 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Set colorscheme
 require("lazy").setup("nekronos.plugins")
 
--- Set undofiles
-vim.cmd("set undofile");
-
--- Set tabulations correctly
-vim.cmd("set shiftwidth=4");
-vim.cmd("set tabstop=4");
