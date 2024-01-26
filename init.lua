@@ -11,6 +11,9 @@ vim.cmd("set tabstop=4")
 -- Set numbering
 vim.cmd("set number")
 
+-- Set terminal escape
+vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', {noremap=true})
+
 -- Set terminal close on exit
 vim.api.nvim_create_autocmd("TermClose", {
     callback = function()
