@@ -11,8 +11,33 @@ vim.cmd("set tabstop=4")
 -- Set numbering
 vim.cmd("set number")
 
--- Set terminal escape
-vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', {noremap=true})
+-- Keybindings
+vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', {noremap=true}) -- Set terminal escape
+vim.api.nvim_set_keymap('n', '<C-F>', '<cmd>NvimTreeToggle<cr>', {noremap=true}) -- Toggle NvimTree
+vim.api.nvim_set_keymap('n', '<C-h>', 'gt', {noremap=true}) -- Next tab
+vim.api.nvim_set_keymap('n', '<C-l>', 'gt', {noremap=true}) -- Next tab
+vim.api.nvim_set_keymap('n', '<C-N>', '<cmd>tabe<cr>', {noremap=true}) -- Create new tab
+local opts = {
+    mode = "n", -- NORMAL mode
+    prefix = "<leader>",
+    buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
+    silent = true, -- use `silent` when creating keymaps
+    noremap = true, -- use `noremap` when creating keymaps
+    nowait = true, -- use `nowait` when creating keymaps
+}
+
+local mappings = {
+
+    ["k"] = { "<cmd>bdelete<CR>", "Kill Buffer" },  -- Close current file
+    ["p"] = { "<cmd>Lazy<CR>", "Plugin Manager" }, -- Invoking plugin manager
+    ["q"] = { "<cmd>wqall!<CR>", "Quit" }, -- Quit Neovim after saving the file
+    ["w"] = { "<cmd>w!<CR>", "Save" }, -- Save current file
+
+    -- Added this line from the initial file
+    ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" }, -- File explorer
+
+}
+
 
 -- Set terminal close on exit
 vim.api.nvim_create_autocmd("TermClose", {
