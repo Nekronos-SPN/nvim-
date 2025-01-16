@@ -1,10 +1,12 @@
-local option = vim.cmd
-option('set undofile'); 	-- Undofiles for after session undoing
-option('set number')		-- Absolute numbering
-option('set nowrap')		-- No text wrapping
+local command = vim.cmd
+command('set undofile'); 		-- Undofiles for after session undoing
+command('set number')			-- Absolute numbering
+command('set nowrap')			-- No text wrapping
+command('colorscheme gruvbox')		-- Change colorscheme
 
-vim.diagnostic.config({
-  virtual_text = false,
+local diagnostic = vim.diagnostic
+diagnostic.config({
+  virtual_text = false, 		-- Disable LSP diagnostics
 })
 
 
