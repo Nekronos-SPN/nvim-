@@ -7,6 +7,9 @@ vim.api.nvim_set_keymap('n', '<S-H>', '<cmd>bp<cr>', {noremap=true}) -- Previous
 vim.api.nvim_set_keymap('n', '<S-L>', '<cmd>bn<cr>', {noremap=true})-- Next tab
 vim.api.nvim_set_keymap('n', '<C-N>', '<cmd>tabe<cr>', {noremap=true}) -- Create new tab
 
+-- Toggle terminal
+vim.api.nvim_set_keymap('n', '<C-T>', '<cmd>ToggleTerm direction=float<cr>', {noremap=true})
+
 -- Set terminal close on exit
 vim.api.nvim_create_autocmd('TermClose', {
     callback = function()
