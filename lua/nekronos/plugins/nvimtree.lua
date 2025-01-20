@@ -9,6 +9,9 @@ return {
 		require('nvim-tree').setup {
 			git = {
 				enable = false,
+			},
+			update_focused_file = {
+				enable = true,
 			}
 		}
 	end,

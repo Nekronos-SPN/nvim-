@@ -1,4 +1,3 @@
-vim.g.mapleader = ","
 -- Tab management
 vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', {noremap=true}) -- Set terminal escape
 vim.api.nvim_set_keymap('n', '<C-B>', '<cmd>NvimTreeToggle<cr>', {noremap=true}) 	-- Toggle NvimTree
