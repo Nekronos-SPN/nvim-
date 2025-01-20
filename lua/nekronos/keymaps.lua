@@ -13,7 +13,7 @@ vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' 
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
 
 -- Toggle terminal
-vim.api.nvim_set_keymap('n', '<C-T>', '<cmd>ToggleTerm direction=float<cr>', {noremap=true})
+vim.api.nvim_set_keymap('n', '<leader>t', '<cmd>ToggleTerm direction=float<cr>', {noremap=true})
 
 -- Set terminal close on exit
 vim.api.nvim_create_autocmd('TermClose', {
