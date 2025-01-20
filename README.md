@@ -16,7 +16,6 @@
 - Look And Feel
     - Status Line: *lualine*
     - Tabs: *tabline*
-    - Scroll: *neoscroll*
 - File Explorer: *nvimtree*
 
 ## Editor Settings
