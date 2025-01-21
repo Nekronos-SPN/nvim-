@@ -3,7 +3,7 @@ vim.api.nvim_set_keymap('n', '<C-B>', '<cmd>NvimTreeToggle<cr>', {noremap=true})
 vim.api.nvim_set_keymap('n', '<C-H>', 'gt', {noremap=true}) -- Previous tab
 vim.api.nvim_set_keymap('n', '<C-L>', 'gt', {noremap=true})-- Next tab
 vim.api.nvim_set_keymap('n', '<C-N>', '<cmd>tabe<cr>', {noremap=true}) -- Create new tab
-vim.api.nvim_set_keymap('n', '<C-X>', '<cmd>bp<bar>sp<bar>bn<bar>bd<cr>', {noremap=true}) -- Delete buffer and avoid closing window
+vim.api.nvim_set_keymap('n', '<leader>x', '<cmd>bp<bar>sp<bar>bn<bar>bd<cr>', {noremap=true}) -- Delete buffer and avoid closing window
 
 -- Telescope usage
 local builtin = require('telescope.builtin')
