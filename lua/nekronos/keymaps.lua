@@ -14,10 +14,3 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help ta
 
 -- Toggle terminal
 vim.api.nvim_set_keymap('n', '<leader>t', '<cmd>ToggleTerm direction=float<cr>', {noremap=true})
-
--- Set terminal close on exit
-vim.api.nvim_create_autocmd('TermClose', {
-    callback = function()
-       vim.cmd('bdelete')
-    end
-})
