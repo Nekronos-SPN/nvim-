@@ -5,6 +5,7 @@ vim.api.nvim_set_keymap('n', '<leader>x', '<cmd>bp<bar>sp<bar>bn<bar>bd<cr>', {n
 -- FZF usage
 vim.keymap.set('n', '<leader>ff', '<cmd>FzfLua files<cr>') -- File search
 vim.keymap.set('n', '<leader>fg', '<cmd>FzfLua live_grep<cr>') -- Grep search
+vim.keymap.set('n', '<leader>fv', '<cmd>FzfLua grep_visual<cr>') -- Grep search highlighted content under visual
 vim.keymap.set('n', '<leader>fb', '<cmd>FzfLua buffers<cr>') -- Grep search
 
 -- LSP Diagnostics
