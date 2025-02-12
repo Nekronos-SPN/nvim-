@@ -9,8 +9,8 @@ vim.keymap.set('n', '<leader>fv', '<cmd>FzfLua grep_visual<cr>') -- Grep search 
 vim.keymap.set('n', '<leader>fb', '<cmd>FzfLua buffers<cr>') -- Grep search
 
 -- LSP Diagnostics
-vim.keymap.set("n", "]g", vim.diagnostic.goto_next)
-vim.keymap.set("n", "[g", vim.diagnostic.goto_prev)
+vim.keymap.set('n', ']g', vim.diagnostic.goto_next)
+vim.keymap.set('n', '[g', vim.diagnostic.goto_prev)
 
 -- Toggle terminal
 vim.api.nvim_set_keymap('n', '<leader>t', '<cmd>ToggleTerm direction=float<cr>', {noremap=true})
