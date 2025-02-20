@@ -32,3 +32,5 @@
     - Numbering: *absolute*
     - Wrapping: *no*
 
+## Languages
+- Golang: *go.nvim*
