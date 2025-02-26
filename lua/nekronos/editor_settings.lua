@@ -16,4 +16,3 @@ diagnostic.config({
   virtual_text = false, 		-- Disable LSP diagnostics
 })
 
-

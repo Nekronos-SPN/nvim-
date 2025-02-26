@@ -13,4 +13,28 @@ vim.keymap.set('n', ']g', vim.diagnostic.goto_next)
 vim.keymap.set('n', '[g', vim.diagnostic.goto_prev)
 
 -- Toggle terminal
-vim.api.nvim_set_keymap('n', '<leader>t', '<cmd>ToggleTerm direction=float<cr>', {noremap=true})
+vim.api.nvim_set_keymap('n', '<leader>t', '<cmd>lua require("toggleterm").toggle(vim.v.count)<cr>', {noremap=true}) -- Toggle terminal by preceeding number
+vim.api.nvim_set_keymap('t', '<C-w>h', '<C-\\><C-n><C-w>h', {noremap=true, silent=true}) -- Use movement when on terminal
+vim.api.nvim_set_keymap('t', '<C-w>j', '<C-\\><C-n><C-w>j', {noremap=true, silent=true})
+vim.api.nvim_set_keymap('t', '<C-w>k', '<C-\\><C-n><C-w>k', {noremap=true, silent=true})
+vim.api.nvim_set_keymap('t', '<C-w>l', '<C-\\><C-n><C-w>l', {noremap=true, silent=true})
+
+-- Quick escape from terminal mode
+vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', {noremap=true, silent=true})
+
+
+vim.api.nvim_create_user_command('Wqa', function()
+  vim.cmd('wa')
+  vim.cmd('qa')
+end, { desc = 'Write all writable buffers and quit, ignoring terminals' })
+vim.api.nvim_set_keymap('n', '<leader>wq', '<cmd>Wqa<cr>', { noremap = true, silent = true })
+
+
+-- Set clipboard sharing with terminal emulator
+-- Unnecesary in newer version of nvim
+vim.keymap.set('n', '<leader>c', '<Plug>OSCYankOperator')
+vim.keymap.set('n', '<leader>cc', '<leader>c_', {remap = true})
+vim.keymap.set('v', '<leader>c', '<Plug>OSCYankVisual')
+
+
+
